@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Tester" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="591,994" sap2010:WorkflowViewState.IdRef="Tester_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:hm="clr-namespace:HMS.Modeling;assembly=HmsTeam.UiPath.Shared" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="58">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>HMS.Modeling</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>HMS.General.CustomActivities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>Modeling</AssemblyReference>
+      <AssemblyReference>HmsTeam.UiPath.Shared</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>HmsTeam.General</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="551,914" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_data" />
+      <Variable x:TypeArguments="s:Random" Name="rnd" />
+      <Variable x:TypeArguments="x:Int32" Name="int_row" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="int_Counter" />
+      <Variable x:TypeArguments="x:Int32" Name="int_Max">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="20" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[dt_data]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="509,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="גיליון1" WorkbookPath="[Path.GetFullPath(&quot;Data.xlsx&quot;)]">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <ui:InterruptibleWhile Condition="[int_Counter&lt;int_Max]" DisplayName="While" sap:VirtualizedContainerService.HintSize="509,695" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="473,534" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="s:Random">[rnd]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="s:Random">[new Random]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[int_row]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[rnd.Next(dt_data.Rows.Count)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="[&quot;Root/&quot;+dt_data.Rows(int_row)(&quot;BusinessDepartment&quot;).ToString+&quot;/&quot;+dt_data.Rows(int_row)(&quot;BusinessProcess&quot;).ToString]" sap:VirtualizedContainerService.HintSize="431,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_4" Priority="High" QueueType="[dt_data.Rows(int_row)(&quot;QueueName&quot;).ToString]" Reference="[&quot;Test-&quot;+Now.ToShortDateString]">
+            <ui:AddQueueItem.ItemInformation>
+              <InArgument x:TypeArguments="x:String" x:Key="FirstName">Lior</InArgument>
+            </ui:AddQueueItem.ItemInformation>
+          </ui:AddQueueItem>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="431,110" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Main.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_BusinessProcessName">[dt_data.Rows(int_row)("BusinessProcess").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_BusinessDepartmentName">[dt_data.Rows(int_row)("BusinessDepartment").ToString]</InArgument>
+              <OutArgument x:TypeArguments="scg:List(s:Exception)" x:Key="out_list_JobSystemExceptions" />
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_int_MaxTransactionToHandle">1</InArgument>
+              <OutArgument x:TypeArguments="scg:List(ui:BusinessRuleException)" x:Key="out_list_JobBusinessExceptions" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_QueueName">[dt_data.Rows(int_row)("QueueName").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_CustomOrchestratorQueueFolderPath" />
+              <InArgument x:TypeArguments="hm:ProcessSetup" x:Key="in_ProcessSetup" />
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_arr_str_TransactionKeysForAnalytics" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_OrchestrartorMainFolderName">Root</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="in_boo_CheckUrgentJob">True</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_GeneralFolderName">.General</InArgument>
+              <InArgument x:TypeArguments="s:String[][]" x:Key="in_arr_arr_str_ProjectDownTimes_Weekday">[{({"11:20","12:00"})}]</InArgument>
+              <InArgument x:TypeArguments="s:String[][]" x:Key="in_arr_arr_str_ProjectDownTimes_Friday" />
+              <InArgument x:TypeArguments="s:String[][]" x:Key="in_arr_arr_str_ProjectDownTimes_Saturday" />
+              <InArgument x:TypeArguments="s:String[][]" x:Key="in_arr_arr_str_ProjectDownTimes_Specific" />
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_arr_str_InvolvedApps" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_CustomMainRPA_FolderPath" />
+              <InArgument x:TypeArguments="x:Boolean" x:Key="in_boo_GlobalErrorCheck">False</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_int_MaxTransactionWithSysExcpInA_Row">3</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <Assign sap:VirtualizedContainerService.HintSize="431,59" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[int_Counter]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[int_Counter+1]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+    </ui:InterruptibleWhile>
+  </Sequence>
+</Activity>
