@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ExecuteTransaction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:h="clr-namespace:HmsTeam_Framework_Activities;assembly=HmsTeam.Framework.Activities" xmlns:hm="clr-namespace:HMS.Modeling;assembly=HmsTeam.UiPath.Shared" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ExecuteTransaction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:h="clr-namespace:HmsTeam_Framework_Activities;assembly=HmsTeam.Framework.Activities" xmlns:hm="clr-namespace:HMS.Modeling;assembly=HmsTeam.UiPath.Shared" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_currentTranItem" Type="InOutArgument(ui:QueueItem)" />
     <x:Property Name="io_list_transactionSystemExceptions" Type="InOutArgument(scg:List(s:Exception))" />
@@ -12,7 +12,7 @@
   <sap:VirtualizedContainerService.HintSize>1121,1872</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="57">
+    <scg:List x:TypeArguments="x:String" Capacity="114">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System</x:String>
@@ -70,10 +70,11 @@
       <x:String>HMS.Excel.CustomActivities</x:String>
       <x:String>UiPath.Activities.Contracts</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="104">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -126,18 +127,20 @@
       <AssemblyReference>System.Management.Automation</AssemblyReference>
       <AssemblyReference>HmsTeam.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Flowchart_Execute (&quot;Green Path&quot;)" sap:VirtualizedContainerService.HintSize="1131,1807" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:Exception" Name="SystemException" />
       <Variable x:TypeArguments="ui:BusinessRuleException" Name="BusinessException" />
-      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="IEnum_UiElement_Reports" />
-      <Variable x:TypeArguments="x:Boolean" Name="boo_ReportProducedInCurrentAttempt">
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="IEnum_UiElement_Reports">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
+          <mva:VisualBasicValue x:TypeArguments="scg:IEnumerable(ui:UiElement)" ExpressionText="new List(Of UiElement)" />
         </Variable.Default>
       </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="boo_ReportProducedInCurrentAttempt" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -158,10 +161,10 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">700,787.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">900,813.5 930,813.5 930,153.12 560,153.12</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">900,813 930,813 930,152.62 560,152.62</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="הודעה קופצת לאחר ניסיון הפקת דוח" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="def84d5e-50b7-40d7-8977-59d4efb2351d" Timeout="5" Version="V1">
+      <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="הודעה קופצת לאחר ניסיון הפקת דוח" sap:VirtualizedContainerService.HintSize="970,1352" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="def84d5e-50b7-40d7-8977-59d4efb2351d" Timeout="5" Version="V1">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -258,16 +261,16 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">360,127.12</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">460,179.12 460,209.12 500.641666666667,209.12 500.641666666667,258.12</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">460,178.12 460,208.12 500.641666666667,208.12 500.641666666667,258.12</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="853,945" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="819,1262" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="819,729" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -317,41 +320,70 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
-                  <uix:NClick sap2010:Annotation.AnnotationText="חשוב לשמור על התכונה parentclass בסלקטור כי כשחוזרים מהפקת מסמך זו האינדיקציה לכך שהעץ נטען מחדש" ClickType="Single" DisplayName="Click 'מכתבים'" sap:VirtualizedContainerService.HintSize="777,213" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/Asp/NavigationTrees/PatientTree?patient=9000582479&amp;record=1364808&amp;unit=111132&amp;recordType=10&amp;recordChar=0" DesignTimeRectangle="48, 293, 384, 18" ElementType="Text" FriendlyName="'מכתבים'" FullSelectorArgument="&lt;webctrl parentid='lettersTable' tag='A' parentclass='jstree-last jstree-closed' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='lettersTable' tag='A' parentclass='jstree-last jstree-closed' type='' aaname=' מכתבים' check:text='מכתבים' /&gt;" Guid="c0bbcea7-8716-4e1e-b4fb-dcdf2ef257bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYQAAAAWCAYAAADAZOsvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJESURBVHhe7do/axRBGMfxBRsbK6vYKMHCVvAFBBRfgC/ATkQQEcRCLNJEQgorIXARIYJWFiI2EQtTHQgpFSGmMkiKFNr4B08d9/fAszc3N7N3pBDX+x58uN3Z2d1uvne3Vw2+fAwAABAEAICpBl93AwAABAEAYFp/MtrqnWm8Xj1tcvMAAN1XDIIiEL9+DH6azbunsvMBAN2WDcIwBg8ygkVh484J82xxzuSuAwDojgMEwQ1fT24dHbsGAKBbskHQswJ7fb83WR2HxzeOhKqqxq4DAOiOsSD01+amtvPiQgj7SwQBAP4D2SCE0LNP/mW9sP3qqs39vbsY1q8dzgZBY7H5+ePNse03fRvT+/LS7ZF52vd56THnxx+trzZj8fU1fvnSRdvWeHoeAGBUexByPxFJfezb5xWb++vt9dYgbL582uyfP7dgtB0HwY+L5mtcC7qP+Vzf10IfL/5O8YjHta37+bV0nkcCADAq+wyhicKnlbI6ClsPT4YPz8+G+1cOTRUEX+y1XQqCpAt3GoR0P6YIeAD07gES3T8XEgDApCDUi75+EsrRsXcbCxaFgwShjT7pTxOEXEzibwR6922Z9v4AMIuyQZAmCu9vFikM/bVj/1QQ4m8IikM8hyAAQFlrEPTvoZSeFziFoBQD0fjfDEL6DCG9F0EAgLJiEJwW0Ely50lurqTz9Ek+N0/jfkzvPj8Ogr4N+Pw4Blr8/RzFxeeIzwEADE0MAgBgNhAEAIAhCAAAQxAAAKYOwl69AQCYbXvhD73J/zfRnloRAAAAAElFTkSuQmCC" InformativeScreenshot="6cf69c6aef2b4280aeea2418e4164b50.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector, Image" />
-                    </uix:NClick.Target>
+                  <TryCatch sap2010:Annotation.AnnotationText="הפעולות הנל עטופות בTC&#xD;&#xA;למקרה שבכלל לא תהיה לשונית 'מכתבים' או 'חדר ניתוח'" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="777,123" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </uix:NClick>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'חדר ניתוח'" sap:VirtualizedContainerService.HintSize="777,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/Asp/NavigationTrees/PatientTree?patient=9000582479&amp;record=1364808&amp;unit=111132&amp;recordType=10&amp;recordChar=0" DesignTimeRectangle="66, 314, 367, 18" ElementType="Text" FriendlyName="'חדר ניתוח'" FullSelectorArgument="&lt;webctrl parentid='lettersUnit1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='lettersUnit1' tag='A' type='' aaname=' חדר ניתוח' check:text='חדר ניתוח' /&gt;" Guid="4f61f5af-b26b-4db5-a308-712b580874ff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXMAAAAWCAYAAAAy9HzPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAImSURBVHhe7dsxSxxBHIbxhTQ2qVLZiWlSBQQ/gIL4AfwCqQTTJIRgIQg2CcEilZDkCIIWV9lolURSaKMIlrFRu5DEzioSSHCz75hZZmdnd04Id3vLc/Djdnf+jls9HOea/P75IwUADDdiDgAtQMwBoAWymH/LDgAAw6w25sedydzRmwkjNAcAGKzKmCvgxdeusff6QXAeADA4wZgr5GcfnqXnn+ZKdF1B//hyzNhZGTVC+wAA+qMy5rd5bS3dK+0BAOif5M/V99Sn78bTtJNZ70En7T6/myZJUtoHANAfwZgfrD00ke4VMQeAwaqP+a+1uGxu48lIMOa65ro/PpavnZ4cmmt6f/ViuTQrodn9z9v5uo7tjMvfr7v5Nl+bnZkqrFm6rnX/unvPANBUwZjrD5wm5percZGYu8FVMG003UC753Z2Yf5RHlJ/VhRsu1eM9nGD7tIe7lrdPQNAU9XG/PrrSpTm3j++Uwix5YfRfqrWcSzm7rk/Kwpwr5+a62ZjMXfvGQCaKov5RXZQlH8yP1uMK8S8uM9NGHfycx3budOTI3Osd/fczvrrvu7mu3+BLq/59HurZmdnps1e9rzungGgqYIx1/PjJuZfnsYRcwAYuGDMxf2HID1HLnpqxdL35Ip4VcilLozEHAD+n8qYWwpZTOjnRGu9xFxB1bHe7WxVzBVeXRdiDgA3ojEHADQfMQeAFiDmANACxBwAWoCYA8DQu0j/AmxDr8HsfkjAAAAAAElFTkSuQmCC" InformativeScreenshot="a8634bf5971869d05719ebc05821e5cb.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector, Image" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <ui:FindChildren Children="[IEnum_UiElement_Reports]" DisplayName="חילוץ מכתבים תחת 'חדר ניתוח'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="777,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
-                    <ui:FindChildren.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="505c89b2-520b-42d7-8163-988df40ad048" InformativeScreenshot="865329c0fcce5698e6df2365a993c2e9" Selector="&lt;webctrl parentid='lettersUnit1' tag='UL' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:FindChildren.Target>
-                  </ui:FindChildren>
-                  <Assign DisplayName="פילטור לפי 'דוח ניתוח רפואי'" sap:VirtualizedContainerService.HintSize="777,61" sap2010:WorkflowViewState.IdRef="Assign_4">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">[IEnum_UiElement_Reports]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">[IEnum_UiElement_Reports.Where(function(x) x.Get("Text").ToString.Contains("דוח ניתmוח רפואי"))]</InArgument>
-                    </Assign.Value>
-                  </Assign>
+                    <TryCatch.Try>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,604" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick sap2010:Annotation.AnnotationText="חשוב לשמור על התכונה parentclass בסלקטור כי כשחוזרים מהפקת מסמך זו האינדיקציה לכך שהעץ נטען מחדש" ClickType="Single" DisplayName="Click 'מכתבים'" sap:VirtualizedContainerService.HintSize="334,213" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/Asp/NavigationTrees/PatientTree?patient=9000582479&amp;record=1364808&amp;unit=111132&amp;recordType=10&amp;recordChar=0" DesignTimeRectangle="48, 293, 384, 18" ElementType="Text" FriendlyName="'מכתבים'" FullSelectorArgument="&lt;webctrl parentid='lettersTable' tag='A' parentclass='jstree-last jstree-closed' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='lettersTable' tag='A' parentclass='jstree-last jstree-closed' type='' aaname=' מכתבים' check:text='מכתבים' /&gt;" Guid="c0bbcea7-8716-4e1e-b4fb-dcdf2ef257bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYQAAAAWCAYAAADAZOsvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJESURBVHhe7do/axRBGMfxBRsbK6vYKMHCVvAFBBRfgC/ATkQQEcRCLNJEQgorIXARIYJWFiI2EQtTHQgpFSGmMkiKFNr4B08d9/fAszc3N7N3pBDX+x58uN3Z2d1uvne3Vw2+fAwAABAEAICpBl93AwAABAEAYFp/MtrqnWm8Xj1tcvMAAN1XDIIiEL9+DH6azbunsvMBAN2WDcIwBg8ygkVh484J82xxzuSuAwDojgMEwQ1fT24dHbsGAKBbskHQswJ7fb83WR2HxzeOhKqqxq4DAOiOsSD01+amtvPiQgj7SwQBAP4D2SCE0LNP/mW9sP3qqs39vbsY1q8dzgZBY7H5+ePNse03fRvT+/LS7ZF52vd56THnxx+trzZj8fU1fvnSRdvWeHoeAGBUexByPxFJfezb5xWb++vt9dYgbL582uyfP7dgtB0HwY+L5mtcC7qP+Vzf10IfL/5O8YjHta37+bV0nkcCADAq+wyhicKnlbI6ClsPT4YPz8+G+1cOTRUEX+y1XQqCpAt3GoR0P6YIeAD07gES3T8XEgDApCDUi75+EsrRsXcbCxaFgwShjT7pTxOEXEzibwR6922Z9v4AMIuyQZAmCu9vFikM/bVj/1QQ4m8IikM8hyAAQFlrEPTvoZSeFziFoBQD0fjfDEL6DCG9F0EAgLJiEJwW0Ely50lurqTz9Ek+N0/jfkzvPj8Ogr4N+Pw4Blr8/RzFxeeIzwEADE0MAgBgNhAEAIAhCAAAQxAAAKYOwl69AQCYbXvhD73J/zfRnloRAAAAAElFTkSuQmCC" InformativeScreenshot="6cf69c6aef2b4280aeea2418e4164b50.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'חדר ניתוח'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/Asp/NavigationTrees/PatientTree?patient=9000582479&amp;record=1364808&amp;unit=111132&amp;recordType=10&amp;recordChar=0" DesignTimeRectangle="66, 314, 367, 18" ElementType="Text" FriendlyName="'חדר ניתוח'" FullSelectorArgument="&lt;webctrl parentid='lettersUnit1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='lettersUnit1' tag='A' type='' aaname=' חדר ניתוח' check:text='חדר ניתוח' /&gt;" Guid="4f61f5af-b26b-4db5-a308-712b580874ff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXMAAAAWCAYAAAAy9HzPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAImSURBVHhe7dsxSxxBHIbxhTQ2qVLZiWlSBQQ/gIL4AfwCqQTTJIRgIQg2CcEilZDkCIIWV9lolURSaKMIlrFRu5DEzioSSHCz75hZZmdnd04Id3vLc/Djdnf+jls9HOea/P75IwUADDdiDgAtQMwBoAWymH/LDgAAw6w25sedydzRmwkjNAcAGKzKmCvgxdeusff6QXAeADA4wZgr5GcfnqXnn+ZKdF1B//hyzNhZGTVC+wAA+qMy5rd5bS3dK+0BAOif5M/V99Sn78bTtJNZ70En7T6/myZJUtoHANAfwZgfrD00ke4VMQeAwaqP+a+1uGxu48lIMOa65ro/PpavnZ4cmmt6f/ViuTQrodn9z9v5uo7tjMvfr7v5Nl+bnZkqrFm6rnX/unvPANBUwZjrD5wm5percZGYu8FVMG003UC753Z2Yf5RHlJ/VhRsu1eM9nGD7tIe7lrdPQNAU9XG/PrrSpTm3j++Uwix5YfRfqrWcSzm7rk/Kwpwr5+a62ZjMXfvGQCaKov5RXZQlH8yP1uMK8S8uM9NGHfycx3budOTI3Osd/fczvrrvu7mu3+BLq/59HurZmdnps1e9rzungGgqYIx1/PjJuZfnsYRcwAYuGDMxf2HID1HLnpqxdL35Ip4VcilLozEHAD+n8qYWwpZTOjnRGu9xFxB1bHe7WxVzBVeXRdiDgA3ojEHADQfMQeAFiDmANACxBwAWoCYA8DQu0j/AmxDr8HsfkjAAAAAAElFTkSuQmCC" InformativeScreenshot="a8634bf5971869d05719ebc05821e5cb.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <Assign DisplayName="פילטור לפי 'דוח ניתוח רפואי'" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">[IEnum_UiElement_Reports]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">[IEnum_UiElement_Reports.Where(function(x) x.Get("Text").ToString.Contains(io_ProcessSetup.BusinessProcess.Assets("SurgeryReportNameToSearchFor").ToString))]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
                 </Sequence>
               </ActivityAction>
             </uix:NApplicationCard.Body>
@@ -371,7 +403,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">420.641666666667,258.12</av:Point>
                   <av:Size x:Key="ShapeSize">160,87</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">420.641666666667,301.62 390.641666666667,301.62 390.641666666667,301.64 370.641666666667,301.64</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">420.641666666667,301.62 390.641666666667,301.62 390.641666666667,301.14 370.641666666667,301.14</av:PointCollection>
                   <av:PointCollection x:Key="FalseConnector">580.641666666667,301.62 601.283333333333,301.62 601.283333333333,356.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -399,7 +431,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">561.283333333333,356.5</av:Point>
                       <av:Size x:Key="ShapeSize">160,87</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">561.283333333333,400 511.283333333333,400</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">561.283333333333,400 531.283333333333,400 531.283333333333,399.5 511.283333333333,399.5</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">721.283333333333,400 789.895,400 789.895,480</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -409,7 +441,7 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">311.283333333333,374</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">411.283333333333,426 411.283333333333,476</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">411.283333333333,425 411.283333333333,476</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
@@ -476,18 +508,18 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,448" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,444" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ClickType="Single" DisplayName="Click 'מנתח'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'מנתח'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/Asp/NavigationButtons/Buttons?Patient=9000866036&amp;Hospital=106&amp;Unit=111132&amp;Record=1364779&amp;Record_Type=10&amp;Record_Char=0" DesignTimeRectangle="1186, 148, 26, 15" ElementType="Text" FriendlyName="'מנתח'" FullSelectorArgument="&lt;webctrl tableCol='14' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='מנתח' tag='SPAN' check:text='מנתח' /&gt;" Guid="6a421276-88cb-4623-9746-6ec51f3ce89d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAATCAYAAACHrr18AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADdSURBVEhL7ZYxCsJAEEW31dZLWFta2ttZBizEA5gTiGBpYWupIJLa0spDeJ2Et/LDZF0CEdwmFo/MzJ+Zvwkp1g2yorw8XslxsWIK/sbJ6LHx/vws3WTdgBraPD99aKDZ6ergc57ky93Vx3YnNfVDw3g0y2uBRptriXIOY3VA12HHi22th7O+V0Fo7EWzKDpsdGB+c7z7mIOB1Wxvq7Ft/sZYcajBz4z51KqHGnQyDvU249iuzsacHhP9tULG0oHloDdWXVo9qyA1/TLmDpDcWBcPfwOBYXZLwtuvKCtIRIylYYS0JAAAAABJRU5ErkJggg==" InformativeScreenshot="681d0ae1afb3d0571cf72139e17593ea.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector, Image" />
                                     </uix:NClick.Target>
                                   </uix:NClick>
-                                  <uix:NClick ClickType="Single" DisplayName="Click 'IMG ToPrint'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'IMG ToPrint'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e44197a3-846f-4307-a57f-8df68fb2124a" Timeout="5" Version="V1">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/Asp/NavigationButtons/Buttons?Patient=9000866036&amp;Hospital=106&amp;Unit=111132&amp;Record=1364779&amp;Record_Type=10&amp;Record_Char=0" DesignTimeRectangle="507, 114, 23, 25" ElementType="Icon" FriendlyName="'IMG ToPrint'" FullSelectorArgument="&lt;webctrl tableCol='3' tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='ערוך להדפסה' tag='IMG' /&gt;" Guid="8cb26d0e-8581-422f-9254-cc5265029a60" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAdCAYAAABbjRdIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH0SURBVEhLzZQ7TsNAEIY3FXRQICro4CpwCOigBe4AVMAV4Ag8O+h4hILHEVDuAAWKAONvtL+zXq8TWwHESL/Gdmbnm3+9juu/vWR/pf8D29/ZbKS97Q3LqR6hRsKaxtPdaeacS/aRXP+1l9WpBPv6SGcfwHBowEQv1A4WAqJ7YI+3J7amDjgSdrC7ZbnTcb6tD8E8EBgxDJiECaK4ujiyTIMK1IfBAnBqSyswQJfnh7aIYCEwJuY5eW1lyf86COoYBICG0rV6l2CA5IIpuRZAQOXUtgKMlYRhWyA5oykLQtDDzbFl3NFoWLAmCcMVISABNAQpM8D66rI1IsdS1DoLt9Cc5dvy3D0zJ/ymfwmJpiVnn+/+YhCNnZHlLN5KsmChI8lOZa5aGGJ6CsJ3hkJnvKvS+6JxTQyFIRrKicQiMhAmp4F2InaFNMBImD3MCzjaciHp25FbAUsROG0EkygUGGmbacjB4RnAijMftacxpWLyYFqeGTCPxflJa5Z0mEcrZzgpRQ5lWpovzE0USgLz2lawkjO583l22tmpxZ2AxXC+pjWMBRKueFe6B6RvMXR5f90tahrDKNThQOE91zNTzgAhkAEYUrWNYU3E9ECB6LsECiiuHRuGYpc6pZW6+ME44tAARL8OQ/F7CvXjsGH6Q1gv+waPRwWkclchqwAAAABJRU5ErkJggg==" InformativeScreenshot="32277030e77470a2485ad1832f1e7c75.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector, Image" />
                                     </uix:NClick.Target>
@@ -572,7 +604,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">360,56.12</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">460,108.12 460,127.12</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">460,107.12 460,127.12</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <uix:NApplicationCard AttachMode="ByInstance" DisplayName="כניסה לתיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="f8e2c60f-81f2-4a6e-9405-98193858fc2c" Version="V1">

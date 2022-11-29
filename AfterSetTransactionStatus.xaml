@@ -7,7 +7,7 @@
     <x:Property Name="in_dic_AllTransactionData" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Type 'hm:ProcessSetup' ('clr-namespace:HMS.Modeling;assembly=Modeling') could not be resolved and was automatically replaced with 'UnknownType'" Name="io_ProcessSetup" Type="InOutArgument(hm:ProcessSetup)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>803,1215</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>741,1215</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="84">
@@ -96,7 +96,7 @@
       <AssemblyReference>HmsTeam.Framework.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="After Set Transaction Status" sap:VirtualizedContainerService.HintSize="813,1150" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="After Set Transaction Status" sap:VirtualizedContainerService.HintSize="604,1150" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JArray" Name="jarray_QueueItems" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_QueueItems" />
@@ -106,7 +106,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_list_transactionBusinessExceptions.Count&gt;0 OrElse in_list_transactionSystemExceptions.Count&gt;0]" DisplayName="If Transaction failed" sap:VirtualizedContainerService.HintSize="771,1058" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[in_list_transactionBusinessExceptions.Count&gt;0 OrElse in_list_transactionSystemExceptions.Count&gt;0]" DisplayName="If Transaction failed" sap:VirtualizedContainerService.HintSize="562,1058" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -130,7 +130,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;הרובוט ישלח את הרשומה לתור עבור ניסיון נוסף, עם דחייה של &quot;+io_ProcessSetup.BusinessProcess.Assets(&quot;HoursBetweenRetries&quot;).ToString+&quot; שעות קדימה&quot;]" />
-                <hs:Retry_Transaction_Item_s in_Datetime_Maximum="{x:Null}" in_Datetime_Minimum="{x:Null}" in_arr_FilterPriority="{x:Null}" in_arr_QueueItems="{x:Null}" in_str_FilterReference="{x:Null}" DisplayName="Retry Transaction Item.s" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="Retry_Transaction_Item_s_1" in_OrchestratorAuth="[io_ProcessSetup.Environment.OrchestratorAuth]" in_boo_FilterReferenceFullMatch="False" in_boo_OnlyMaxRetries="False" in_boo_RaiseErrorIfMoreThan1="True" in_boo_RaiseErrorIfNotAllSuccess="False" in_datetime_Postpone="[Now.AddHours(Convert.ToInt32(io_ProcessSetup.BusinessProcess.Assets(&quot;HoursBetweenRetries&quot;)))]" in_dic_obj_FilterBySpecificContentValues="[new Dictionary(of string,object)]" in_dic_str_obj_FilterByAnalyticsValues="[new Dictionary(of string,object)]" in_dic_str_obj_FilterByOutputValues="[new Dictionary(of string,object)]" in_str_OrchestratorFolderPath="[io_ProcessSetup.BusinessProcess.OrchestratorFolderPath]" in_str_QueueName="[io_ProcessSetup.Job.QueueName]" />
+                <hs:Retry_Transaction_Item_s in_Datetime_Maximum="{x:Null}" in_Datetime_Minimum="{x:Null}" in_arr_FilterPriority="{x:Null}" in_str_FilterReference="{x:Null}" DisplayName="Retry Transaction Item.s" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="Retry_Transaction_Item_s_1" in_OrchestratorAuth="[io_ProcessSetup.Environment.OrchestratorAuth]" in_arr_QueueItems="[{in_currentTranItem}]" in_boo_FilterReferenceFullMatch="False" in_boo_OnlyMaxRetries="False" in_boo_RaiseErrorIfMoreThan1="True" in_boo_RaiseErrorIfNotAllSuccess="False" in_datetime_Postpone="[Now.AddHours(Convert.ToInt32(io_ProcessSetup.BusinessProcess.Assets(&quot;HoursBetweenRetries&quot;)))]" in_dic_obj_FilterBySpecificContentValues="[new Dictionary(of string,object)]" in_dic_str_obj_FilterByAnalyticsValues="[new Dictionary(of string,object)]" in_dic_str_obj_FilterByOutputValues="[new Dictionary(of string,object)]" in_str_OrchestratorFolderPath="[io_ProcessSetup.BusinessProcess.OrchestratorFolderPath]" in_str_QueueName="[io_ProcessSetup.Job.QueueName]" />
               </Sequence>
             </If.Then>
             <If.Else>

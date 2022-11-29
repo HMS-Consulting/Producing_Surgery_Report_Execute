@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_str_BusinessProcessName="CreateSurgeryReport" this:Main.in_str_BusinessDepartmentName="Wolfson" this:Main.in_int_MaxTransactionToHandle="0" this:Main.in_str_QueueName="SugeryReport" this:Main.in_str_OrchestrartorMainFolderName="Root" this:Main.in_boo_CheckUrgentJob="True" this:Main.in_str_GeneralFolderName=".General" this:Main.in_boo_GlobalErrorCheck="True" this:Main.in_int_MaxTransactionWithSysExcpInA_Row="3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:h="clr-namespace:HmsTeam_Framework_Activities;assembly=HmsTeam.Framework.Activities" xmlns:hg="clr-namespace:HmsTeam_OrchestratorAPI_Activities.Get;assembly=HmsTeam.OrchestratorAPI.Activities" xmlns:hm="clr-namespace:HMS.Modeling;assembly=HmsTeam.UiPath.Shared" xmlns:hs="clr-namespace:HmsTeam_OrchestratorAPI_Activities.Special;assembly=HmsTeam.OrchestratorAPI.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_str_BusinessProcessName="CreateSurgeryReport" this:Main.in_str_BusinessDepartmentName="Wolfson" this:Main.in_int_MaxTransactionToHandle="1" this:Main.in_str_QueueName="SurgeryReport" this:Main.in_str_OrchestrartorMainFolderName="Root" this:Main.in_boo_CheckUrgentJob="True" this:Main.in_str_GeneralFolderName=".General" this:Main.in_boo_GlobalErrorCheck="True" this:Main.in_int_MaxTransactionWithSysExcpInA_Row="3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:h="clr-namespace:HmsTeam_Framework_Activities;assembly=HmsTeam.Framework.Activities" xmlns:hg="clr-namespace:HmsTeam_OrchestratorAPI_Activities.Get;assembly=HmsTeam.OrchestratorAPI.Activities" xmlns:hm="clr-namespace:HMS.Modeling;assembly=HmsTeam.UiPath.Shared" xmlns:hs="clr-namespace:HmsTeam_OrchestratorAPI_Activities.Special;assembly=HmsTeam.OrchestratorAPI.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_str_BusinessProcessName" Type="InArgument(x:String)" />
     <x:Property Name="in_str_BusinessDepartmentName" Type="InArgument(x:String)" />
@@ -682,12 +682,12 @@
                   <Transition.To>
                     <State x:Name="__ReferenceID49" DisplayName="State_Get next transaction item" sap:VirtualizedContainerService.HintSize="136,156" sap2010:WorkflowViewState.IdRef="State_8">
                       <State.Entry>
-                        <Flowchart DisplayName="Flowchart_Get next transaction" sap:VirtualizedContainerService.HintSize="853.6,953.6" sap2010:WorkflowViewState.IdRef="Flowchart_11">
+                        <Flowchart DisplayName="Flowchart_Get next transaction" sap:VirtualizedContainerService.HintSize="854,953" sap2010:WorkflowViewState.IdRef="Flowchart_11">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">0,2.4</av:Point>
-                              <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                              <av:Size x:Key="ShapeSize">60,75</av:Size>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               <av:PointCollection x:Key="ConnectorLocation">60,40 90,40 90,50 298.8,50</av:PointCollection>
                               <x:Double x:Key="Width">819.60000000000014</x:Double>
@@ -701,11 +701,11 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">298.8,20</av:Point>
-                                <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                                <av:Size x:Key="ShapeSize">262,60</av:Size>
                                 <av:PointCollection x:Key="ConnectorLocation">430,80 430,110 410,110 410,138.8</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_134">
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_134">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="ui:QueueItem">[tran_currentTranItem]</OutArgument>
                               </Assign.To>
@@ -723,11 +723,11 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">310,138.8</av:Point>
-                                    <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                                    <av:Size x:Key="ShapeSize">200,22</av:Size>
                                     <av:PointCollection x:Key="ConnectorLocation">410,161.2 410,191.2 380.641666666667,191.2 380.641666666667,201.2</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ShouldStop DisplayName="Should Stop" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="ShouldStop_3" Result="[boo_shouldStop]">
+                                <ui:ShouldStop DisplayName="Should Stop" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ShouldStop_3" Result="[boo_shouldStop]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -735,12 +735,12 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ShouldStop>
                                 <FlowStep.Next>
-                                  <FlowDecision x:Name="__ReferenceID24" Condition="[boo_shouldStop]" DisplayName="got stop request from orchestrator" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                                  <FlowDecision x:Name="__ReferenceID24" Condition="[boo_shouldStop]" DisplayName="got stop request from orchestrator" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <av:Point x:Key="ShapeLocation">300.641666666667,201.2</av:Point>
-                                        <av:Size x:Key="ShapeSize">160,87.2</av:Size>
+                                        <av:Size x:Key="ShapeSize">160,87</av:Size>
                                         <av:PointCollection x:Key="TrueConnector">300.641666666667,244.8 270.641666666667,244.8 270.641666666667,250 210,250</av:PointCollection>
                                         <av:PointCollection x:Key="FalseConnector">460.641666666667,244.8 570,244.8 570,333.6</av:PointCollection>
                                       </scg:Dictionary>
@@ -750,20 +750,20 @@
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">10,223.6</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                            <av:Size x:Key="ShapeSize">200,51</av:Size>
                                             <av:PointCollection x:Key="ConnectorLocation">110,276.4 110,306.4 131.2,306.4 131.2,326.4</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log message (Stop process requested)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Stop process requested fro orchestrator.&quot;]" />
+                                        <ui:LogMessage DisplayName="Log message (Stop process requested)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Stop process requested fro orchestrator.&quot;]" />
                                         <FlowStep.Next>
                                           <FlowStep x:Name="__ReferenceID32">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <av:Point x:Key="ShapeLocation">0,326.4</av:Point>
-                                                <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                                                <av:Size x:Key="ShapeSize">262,60</av:Size>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_206">
+                                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_206">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="hm:JobEndedReason">[in_ProcessSetup.Job.EndedReason]</OutArgument>
                                               </Assign.To>
@@ -785,23 +785,23 @@
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">470,333.6</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                            <av:Size x:Key="ShapeSize">200,51</av:Size>
                                             <av:PointCollection x:Key="ConnectorLocation">570,386.4 570,416.4 460,416.4 460,436.4</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CheckForDownTime workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="CheckForDownTime.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CheckForDownTime workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="CheckForDownTime.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <OutArgument x:TypeArguments="x:TimeSpan" x:Key="out_timespan_NextOK_Time">[timespan_NextOK_Time]</OutArgument>
                                             <InOutArgument x:TypeArguments="hm:ProcessSetup" x:Key="io_ProcessSetup">[in_ProcessSetup]</InOutArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
                                         </ui:InvokeWorkflowFile>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID30" Condition="[in_ProcessSetup.Job.EndedReason.Equals(HMS.Modeling.JobEndedReason.ProcessDownTime) OrElse in_ProcessSetup.Job.EndedReason.Equals(HMS.Modeling.JobEndedReason.BusinessAppsDownTime)]" DisplayName="IsNowProcess/BusinessApps DownTime" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_31">
+                                          <FlowDecision x:Name="__ReferenceID30" Condition="[in_ProcessSetup.Job.EndedReason.Equals(HMS.Modeling.JobEndedReason.ProcessDownTime) OrElse in_ProcessSetup.Job.EndedReason.Equals(HMS.Modeling.JobEndedReason.BusinessAppsDownTime)]" DisplayName="IsNowProcess/BusinessApps DownTime" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_31">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <av:Point x:Key="ShapeLocation">380,436.4</av:Point>
-                                                <av:Size x:Key="ShapeSize">160,87.2</av:Size>
+                                                <av:Size x:Key="ShapeSize">160,87</av:Size>
                                                 <av:PointCollection x:Key="FalseConnector">540,480 679.6,480 679.6,576.4</av:PointCollection>
                                                 <av:PointCollection x:Key="TrueConnector">380,480 250,480 250,543.6</av:PointCollection>
                                               </scg:Dictionary>
@@ -811,11 +811,11 @@
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">150,543.6</av:Point>
-                                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                    <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                     <av:PointCollection x:Key="ConnectorLocation">170.641666666667,569.3 170.641666666667,599.3 170,599.3 170,620</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Seq_ProcessDownTimeBeforeTransaction workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ProcessDownTimes\ProcessDownTimeBeforeTransaction.xaml">
+                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Seq_ProcessDownTimeBeforeTransaction workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ProcessDownTimes\ProcessDownTimeBeforeTransaction.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
                                                     <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_timespan_NextOK_Time">[timespan_NextOK_Time]</InArgument>
                                                     <InArgument x:TypeArguments="x:String" x:Key="in_str_CustomOrchestratorQueueFolderPath">[in_str_CustomOrchestratorQueueFolderPath]</InArgument>
@@ -826,12 +826,12 @@
                                               </FlowStep>
                                             </FlowDecision.True>
                                             <FlowDecision.False>
-                                              <FlowDecision x:Name="__ReferenceID28" sap2010:Annotation.AnnotationText="Original condition:&#xA;If(in_ProcessSetup.Job.IsRunningFromRobot,in_boo_CheckUrgentJob And in_ProcessSetup.Job.Details(&quot;JobPriority&quot;).ToString&lt;&gt;&quot;High&quot;,false)" Condition="[If(in_ProcessSetup.Job.IsRunningFromRobot,in_boo_CheckUrgentJob And in_ProcessSetup.Job.Details(&quot;JobPriority&quot;).ToString&lt;&gt;&quot;High&quot;,false)]" DisplayName="need to check for urgent job" sap:VirtualizedContainerService.HintSize="156,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_29">
+                                              <FlowDecision x:Name="__ReferenceID28" sap2010:Annotation.AnnotationText="Original condition:&#xA;If(in_ProcessSetup.Job.IsRunningFromRobot,in_boo_CheckUrgentJob And in_ProcessSetup.Job.Details(&quot;JobPriority&quot;).ToString&lt;&gt;&quot;High&quot;,false)" Condition="[If(in_ProcessSetup.Job.IsRunningFromRobot,in_boo_CheckUrgentJob And in_ProcessSetup.Job.Details(&quot;JobPriority&quot;).ToString&lt;&gt;&quot;High&quot;,false)]" DisplayName="need to check for urgent job" sap:VirtualizedContainerService.HintSize="156,87" sap2010:WorkflowViewState.IdRef="FlowDecision_29">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <av:Point x:Key="ShapeLocation">601.6,576.4</av:Point>
-                                                    <av:Size x:Key="ShapeSize">156,87.2</av:Size>
+                                                    <av:Size x:Key="ShapeSize">156,87</av:Size>
                                                     <av:PointCollection x:Key="FalseConnector">757.6,620 780,620 780,833.6 630,833.6 630,863.6</av:PointCollection>
                                                     <av:PointCollection x:Key="TrueConnector">601.6,620 440,620 440,633.6</av:PointCollection>
                                                     <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -842,11 +842,11 @@
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <av:Point x:Key="ShapeLocation">340,633.6</av:Point>
-                                                        <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                        <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                         <av:PointCollection x:Key="ConnectorLocation">440,686.4 440,716.4 410,716.4 410,726.4</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Flowchart DisplayName="check for uregent job" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Flowchart_16">
+                                                    <Flowchart DisplayName="check for uregent job" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_16">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1205,12 +1205,12 @@
                                                       <x:Reference>__ReferenceID20</x:Reference>
                                                     </Flowchart>
                                                     <FlowStep.Next>
-                                                      <FlowDecision x:Name="__ReferenceID27" Condition="[not boo_StopJobBecauseOfUrgent]" DisplayName="need to take another transaction?" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
+                                                      <FlowDecision x:Name="__ReferenceID27" Condition="[not boo_StopJobBecauseOfUrgent]" DisplayName="need to take another transaction?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <av:Point x:Key="ShapeLocation">330,726.4</av:Point>
-                                                            <av:Size x:Key="ShapeSize">160,87.2</av:Size>
+                                                            <av:Size x:Key="ShapeSize">160,87</av:Size>
                                                             <av:PointCollection x:Key="FalseConnector">766.641666666667,1620.1 790,1620.1 790,1813.6 640,1813.6 640,1843.6</av:PointCollection>
                                                             <av:PointCollection x:Key="TrueConnector">330,770 300,770 300,890 530,890</av:PointCollection>
                                                           </scg:Dictionary>
@@ -1220,10 +1220,10 @@
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <av:Point x:Key="ShapeLocation">530,863.6</av:Point>
-                                                                <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <TryCatch DisplayName="Try_Get next transaction item" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_19">
+                                                            <TryCatch DisplayName="Try_Get next transaction item" sap:VirtualizedContainerService.HintSize="732,1660" sap2010:WorkflowViewState.IdRef="TryCatch_19">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1231,13 +1231,13 @@
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                               <TryCatch.Try>
-                                                                <Sequence sap:VirtualizedContainerService.HintSize="693.6,1459.2" sap2010:WorkflowViewState.IdRef="Sequence_146">
+                                                                <Sequence sap:VirtualizedContainerService.HintSize="694,1432" sap2010:WorkflowViewState.IdRef="Sequence_146">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from Orchestrator queue.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="652,1366.4" sap2010:WorkflowViewState.IdRef="Sequence_145">
+                                                                  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from Orchestrator queue.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="652,1340" sap2010:WorkflowViewState.IdRef="Sequence_145">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1245,7 +1245,7 @@
                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:GetQueueItem TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get a transaction item from the specified Orchestrator queue.&#xA;If queues are not used in this process, replace this activity with the appropriated logic to retrieve transaction items.&#xA;For example, if transactions are rows from a DataTable, the row corresponding to the current transaction is retrieved at this point." ContinueOnError="False" DisplayName="Get transaction item" FolderPath="[IF(in_str_CustomOrchestratorQueueFolderPath&lt;&gt;&quot;&quot; and in_str_CustomOrchestratorQueueFolderPath isNot Nothing,in_str_CustomOrchestratorQueueFolderPath,in_ProcessSetup.BusinessProcess.OrchestratorFolderPath)]" sap:VirtualizedContainerService.HintSize="610.4,226.4" sap2010:WorkflowViewState.IdRef="GetQueueItem_4" QueueType="[in_str_QueueName]" TransactionItem="[tran_currentTranItem]">
+                                                                    <ui:GetQueueItem TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get a transaction item from the specified Orchestrator queue.&#xA;If queues are not used in this process, replace this activity with the appropriated logic to retrieve transaction items.&#xA;For example, if transactions are rows from a DataTable, the row corresponding to the current transaction is retrieved at this point." ContinueOnError="False" DisplayName="Get transaction item" FolderPath="[IF(in_str_CustomOrchestratorQueueFolderPath&lt;&gt;&quot;&quot; and in_str_CustomOrchestratorQueueFolderPath isNot Nothing,in_str_CustomOrchestratorQueueFolderPath,in_ProcessSetup.BusinessProcess.OrchestratorFolderPath)]" sap:VirtualizedContainerService.HintSize="610,214" sap2010:WorkflowViewState.IdRef="GetQueueItem_4" QueueType="[in_str_QueueName]" TransactionItem="[tran_currentTranItem]">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1406,9 +1406,9 @@
                             <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="tran_currentTranItem IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_8" />
                           </Transition.Condition>
                           <Transition.To>
-                            <State x:Name="__ReferenceID52" sap2010:Annotation.AnnotationText="בכל מקרה של שגיאה (עסקית או טכנית) שבגינה נרצה להפסיק מיד את הטיפול ברשומה נשתמש ב&#xA; Throw&#xA;למשל:&#xA;Throw new BusinessRuleException(&quot;Customer doesn't exist&quot;).&#xA;בכל מקרה של שגיאה (טכנית או עסקית) בגינה נרצה להמשיך ולהשאר בתוך ה-State הגדול נשתמש ב&#xA;Add to collection" DisplayName="State_Execute Transaction" sap:VirtualizedContainerService.HintSize="300,223" sap2010:WorkflowViewState.IdRef="State_13">
+                            <State x:Name="__ReferenceID52" sap2010:Annotation.AnnotationText="בכל מקרה של שגיאה (עסקית או טכנית) שבגינה נרצה להפסיק מיד את הטיפול ברשומה נשתמש ב&#xA; Throw&#xA;למשל:&#xA;Throw new BusinessRuleException(&quot;Customer doesn't exist&quot;).&#xA;בכל מקרה של שגיאה (טכנית או עסקית) בגינה נרצה להמשיך ולהשאר בתוך ה-State הגדול נשתמש ב&#xA;Add to collection" DisplayName="State_Execute Transaction" sap:VirtualizedContainerService.HintSize="1014,1629" sap2010:WorkflowViewState.IdRef="State_13">
                               <State.Entry>
-                                <TryCatch DisplayName="Try_Execute transation" sap:VirtualizedContainerService.HintSize="967.2,1070.4" sap2010:WorkflowViewState.IdRef="TryCatch_23">
+                                <TryCatch DisplayName="Try_Execute transation" sap:VirtualizedContainerService.HintSize="968,1059" sap2010:WorkflowViewState.IdRef="TryCatch_23">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1416,7 +1416,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence DisplayName="Sequence_Execute Transaction" sap:VirtualizedContainerService.HintSize="375.2,816" sap2010:WorkflowViewState.IdRef="Sequence_150">
+                                    <Sequence DisplayName="Sequence_Execute Transaction" sap:VirtualizedContainerService.HintSize="376,808" sap2010:WorkflowViewState.IdRef="Sequence_150">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="njl:JValue" Name="temp" />
                                       </Sequence.Variables>
@@ -1426,7 +1426,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_203">
+                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_203">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:Object">[dic_str_obj_AllTransactionData("LogF_TransactionProgress")]</OutArgument>
                                         </Assign.To>
@@ -1434,7 +1434,7 @@
                                           <InArgument x:TypeArguments="x:Object">[tran_currentTranItem.Progress]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <ui:RemoveLogFields DisplayName="Remove Log Fields" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="RemoveLogFields_3">
+                                      <ui:RemoveLogFields DisplayName="Remove Log Fields" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RemoveLogFields_3">
                                         <ui:RemoveLogFields.Fields>
                                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="16">
                                             <InArgument x:TypeArguments="x:String">queueName</InArgument>
@@ -1446,7 +1446,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:RemoveLogFields>
-                                      <ui:AddLogFields sap2010:Annotation.AnnotationText="This activity ensure that from now on, the transaction data will be added to logs " DisplayName="Add TransactionData to LogField" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="AddLogFields_5">
+                                      <ui:AddLogFields sap2010:Annotation.AnnotationText="This activity ensure that from now on, the transaction data will be added to logs " DisplayName="Add TransactionData to LogField" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="AddLogFields_5">
                                         <ui:AddLogFields.Fields>
                                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="LogF_AllTransactionData">[dic_str_obj_AllTransactionData]</InArgument>
                                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="LogF_TransactionSpecificContent">[tran_currentTranItem.SpecificContent]</InArgument>
@@ -1464,14 +1464,14 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddLogFields>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Transaction started. Reference: &quot;+tran_currentTranItem.Reference+vbCr+&quot;Priority: &quot;+tran_currentTranItem.Priority.ToString+vbCr+&quot;Queue name: &quot;+tran_currentTranItem.QueueName+vbCr+&quot;Progress: &quot;+tran_currentTranItem.Progress+vbCr+&quot;RetryNo: &quot;+tran_currentTranItem.RetryNo.ToString+vbCr+&quot;Specific content: &quot;+vbCr+Newtonsoft.Json.JsonConvert.SerializeObject(tran_currentTranItem.SpecificContent)]">
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Transaction started. Reference: &quot;+tran_currentTranItem.Reference+vbCr+&quot;Priority: &quot;+tran_currentTranItem.Priority.ToString+vbCr+&quot;Queue name: &quot;+tran_currentTranItem.QueueName+vbCr+&quot;Progress: &quot;+tran_currentTranItem.Progress+vbCr+&quot;RetryNo: &quot;+tran_currentTranItem.RetryNo.ToString+vbCr+&quot;Specific content: &quot;+vbCr+Newtonsoft.Json.JsonConvert.SerializeObject(tran_currentTranItem.SpecificContent)]">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:LogMessage>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExecuteTransation workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ExecuteTransaction.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExecuteTransation workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ExecuteTransaction.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="io_currentTranItem">[tran_currentTranItem]</InOutArgument>
                                           <InOutArgument x:TypeArguments="scg:List(s:Exception)" x:Key="io_list_transactionSystemExceptions">[list_transactionSystemExceptions]</InOutArgument>
