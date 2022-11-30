@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Type 'hm:ProcessSetup' ('clr-namespace:HMS.Modeling;assembly=Modeling') could not be resolved and was automatically replaced with 'UnknownType'" Name="io_ProcessSetup" Type="InOutArgument(hm:ProcessSetup)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>798,611</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1125,827</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -146,28 +146,35 @@
                       <av:Size x:Key="ShapeSize">200,66</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Seq_actions that validate system is active" sap:VirtualizedContainerService.HintSize="476,589" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <Sequence DisplayName="Seq_actions that validate system is active" sap:VirtualizedContainerService.HintSize="476,626" sap2010:WorkflowViewState.IdRef="Sequence_24">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: Chameleon" sap:VirtualizedContainerService.HintSize="434,497" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="198f03e9-934c-41c7-901f-9f5f61e74230" Timeout="5" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: Chameleon" sap:VirtualizedContainerService.HintSize="434,534" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="198f03e9-934c-41c7-901f-9f5f61e74230" Timeout="5" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,281" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,318" sap2010:WorkflowViewState.IdRef="Sequence_27">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NClick sap2010:Annotation.AnnotationText="הקליק נועד לוודא שהמערכת חיה" ClickType="Single" DisplayName="Click 'מטופלים'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="198f03e9-934c-41c7-901f-9f5f61e74230" Timeout="5" Version="V3">
+                            <uix:NClick sap2010:Annotation.AnnotationText="הקליק נועד לוודא שהמערכת חיה" ClickType="Single" DisplayName="Click 'מטופלים'" sap:VirtualizedContainerService.HintSize="334,224" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="198f03e9-934c-41c7-901f-9f5f61e74230" Timeout="5" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/Asp/Navigation/SearchPatient?Logout=0&amp;Patient=&amp;Unit=&amp;Record=&amp;Record_Type=&amp;Record_Char=&amp;Record_Title=&amp;pReloginByUserRecord=0&amp;Hospital=106&amp;PatientID=0&amp;QuickOpen=&amp;idnum=&amp;isLogonRecordOpen=False" DesignTimeRectangle="623, 55, 43, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'מטופלים'" FullSelectorArgument="&lt;webctrl tableCol='2' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='A' aaname='מטופלים ' check:innerText='מטופלים' /&gt;" Guid="5f214d9f-076a-4139-b891-3eb1d4ce8790" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAATCAYAAAAAn1R6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD/SURBVEhL7ZKxCsJQDEX9LD/JD3H2H5z9AldXhw5OOko3ETqICA6V8yBwTaO20tIqvXAxL2mS42sn03lWqpHPDdUjfF8e4ftya/CbfZEc1bryf8PPloeUU5HTGjHgXqvtKVlVXO+V2RZb7Xi+pbxdBjN2+eWJhVwteF1Ik511uTcABk9seYCiftvDLz1+NjN8X2N4jMj7BWqWLdZ5BR4zj5r2v9tD7D9Lnv0KnrMNjQyY9hAj8pztrTSFt37Ms53AI13kTX908xab9Ry9vdbhgfKL1NSs7oHtjRD7zy1iqAUf6RW8X8qfUWnNw2OV5fRCVB/hh+wRvi//F/zvOCsflIuW8GLDqkwAAAAASUVORK5CYII=" InformativeScreenshot="c6f00a2113e06be2003ced8659ec9628.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                               </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="Label 'רשימת מטופלים ביחידה'" Mode="Appears" Retry="True" Timeout="5">
+                                  <uix:VerifyExecutionOptions.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://wolfchamdbtst/Chameleon/PatientsLists/Patients?" DesignTimeRectangle="1762, 107, 130, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'רשימת מטופלים ביחידה'" FullSelectorArgument="&lt;webctrl id='titleText' tableCol='2' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='titleText' type='' class='' tag='LABEL' aaname='רשימת מטופלים ביחידה' check:innerText='רשימת מטופלים ביחידה' /&gt;" Guid="33b884cd-63b0-4239-b6cd-15b974a9d156" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIYAAAASCAYAAACejqbEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI6SURBVGhD7ZYxTl1BDEWpsy92wTLYQRZBn4oFUCFlASmSBUCLRANNUqV60UFcdHGu3/wPRaRgS0d6M/bcsf2s9//JNjYW7OTT2eU2DJUZjCEygzFE/vvB+Hb7sF1c30Tf0DODMUReBuP089fn/6OvTf6r73fPO3/b+Zcf2+Ov30/Ph2h5bNLFr9jEMfoMRjXuxMfAVPO7edZaNconQ581Wrf3P5/i3MhVZ5yuBswHeaXrtbLnOdY1dYPOyDxG7H4xJJJ8gI+EtVYBNSGoWor1GLG69736xKFB0/ViBWvOai0dSDlhaPGM39fopzMi1QEY9Wi90u36Xusjjj2tRa0Zlj8lXKSEks+b3yUoXEuxNUbs+Tt9b97eefnSYACmZ8VCutPv4WVWPazrX1cHeuhqvdJVDlWPfR8ETM+V6nv1U5KSZK8rDJ+aAl2CwrW8oQkakaYb3quvOPzEdX6epQPpTr+HnOudrlXp6qj7K13l4OfonWuwTrUK14ODBqMmtfK9Ravy1sFY6eP3BnEGq59uNSk13fHB8HNiL6dOs+4fqkuMm/v28oB6x4cbDMwbUMGHae0v3vcFd0rv2Jy6Our+obqdHkO/97UAzqkO+DCDwRnMi0/QQO72tTRpsH9Z/LefmNT8VU6pDt8/RjfpcTbdUSHGe/PPB4PG7pm/CIF+Z12uqbnEVvOhAB8MIB+Z58YQ66zHYCkneoF19al/x+imviT9BPdxXuuXwRgGZwZjiMxgDJEZjCFwuf0B8tLWkIEx3YUAAAAASUVORK5CYII=" InformativeScreenshot="9e2e4c3c1857d1971e3683879bb328bd.png" ScopeSelectorArgument="&lt;html title='Chameleon' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                  </uix:VerifyExecutionOptions.Target>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -215,7 +222,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:KillProcess>
-                        <h:Login sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Login_1" in_secure_password="[CType(io_ProcessSetup.Job.CustomData(&quot;ChameleonPassword&quot;),SecureString)]" in_str_chameleon_url="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonURL&quot;).ToString]" in_str_field="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonField&quot;).ToString]" in_str_username="[io_ProcessSetup.Job.CustomData(&quot;ChameleonUsername&quot;).ToString]">
+                        <h:Login sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Login_1" in_dbl_timeoutInSec="3" in_secure_password="[CType(io_ProcessSetup.Job.CustomData(&quot;ChameleonPassword&quot;),SecureString)]" in_str_chameleon_url="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonURL&quot;).ToString]" in_str_field="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonField&quot;).ToString]" in_str_username="[io_ProcessSetup.Job.CustomData(&quot;ChameleonUsername&quot;).ToString]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
