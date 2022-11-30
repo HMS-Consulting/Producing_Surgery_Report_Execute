@@ -166,7 +166,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="936,1063" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1454,1412" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="str_MessageText" />
               </Sequence.Variables>
@@ -175,7 +175,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NGetText DisplayName="Get Message text" sap:VirtualizedContainerService.HintSize="894,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Version="V1">
+              <uix:NGetText DisplayName="Get Message text" sap:VirtualizedContainerService.HintSize="1412,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Version="V1">
                 <uix:NGetText.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="70, 54, 318, 41" ElementType="Text" FriendlyName="'למטופל קיים'" FullSelectorArgument="&lt;ctrl role='text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='65535' title='למטופל קיים מכתב זהה, הופק ע&amp;quot;י  רובוט יואיפי ב-28/11/2022 01:48 *' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="963b6d5b-2d6e-415c-9cb1-ca998acc8a7c" InformativeScreenshot="ecd93b7fa172b07d4aec9e8a6594427a.png" ScopeSelectorArgument="&lt;wnd app='iexplore.exe' title='Message from webpage' /&gt;" SearchSteps="Selector" />
                 </uix:NGetText.Target>
@@ -183,59 +183,97 @@
                   <OutArgument x:TypeArguments="x:String">[str_MessageText]</OutArgument>
                 </uix:NGetText.Text>
               </uix:NGetText>
-              <If Condition="[str_MessageText.Contains(&quot;למטופל קיים מכתב זהה&quot;)]" sap:VirtualizedContainerService.HintSize="894,773" sap2010:WorkflowViewState.IdRef="If_7">
+              <If Condition="[str_MessageText.Contains(&quot;למטופל קיים מכתב זהה&quot;)]" sap:VirtualizedContainerService.HintSize="1412,1124" sap2010:WorkflowViewState.IdRef="If_7">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,381" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,379" sap2010:WorkflowViewState.IdRef="Sequence_14">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;הופיעה הודעת 'למטופל קיים מכתב זהה'. הרובוט לחץ OK להפקת מכתב בכל מקרה&quot;]" />
-                    <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Version="V1">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable DesignTimeRectangle="244, 125, 75, 23" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='unchecked' /&gt;" Guid="cc4687a3-6bac-4883-8d73-e15aad088664" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVGhD7dbBDcIwDIXh7JRtMgm3rJJVMgXnbpANTK3QNK5SQbEIRnqHX2Dq06dAcKUUQp8FPEXAUyTw3O2OXiS8xDBYRjLhJYbnwrIs6BDwFAFPEfAUAU+RbbwUyDnX8jF3zxMF5ynmOqew7oTUPf9+ZvFy9CtYoNQ+yxR9D9ThMfJkOM4oHkPtp6qVI/kGuuHxa488L5t4Aqmvnr6Q+H3F8yPkSf0h3obFeKPfwnnZxDtcBq3Tr+1vTp9RvPMLYz9lHRpfGD5SbrtzMovHVcALf1UmA5rGsx7wFAFPEfAUvY2HzhNeYhgsI5nw6gd0LeApAt7HFXoAb+ZrYvlHDM8AAAAASUVORK5CYII=" InformativeScreenshot="2fcb5f31cbfa543f3cc2b65cf7c8f0c7.png" ScopeSelectorArgument="&lt;wnd app='iexplore.exe' cls='#32770' title='Message from webpage' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                        <uix:TargetAnchorable DesignTimeRectangle="244, 125, 75, 23" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='unchecked' /&gt;" Guid="cc4687a3-6bac-4883-8d73-e15aad088664" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVGhD7dbBDcIwDIXh7JRtMgm3rJJVMgXnbpANTK3QNK5SQbEIRnqHX2Dq06dAcKUUQp8FPEXAUyTw3O2OXiS8xDBYRjLhJYbnwrIs6BDwFAFPEfAUAU+RbbwUyDnX8jF3zxMF5ynmOqew7oTUPf9+ZvFy9CtYoNQ+yxR9D9ThMfJkOM4oHkPtp6qVI/kGuuHxa488L5t4Aqmvnr6Q+H3F8yPkSf0h3obFeKPfwnnZxDtcBq3Tr+1vTp9RvPMLYz9lHRpfGD5SbrtzMovHVcALf1UmA5rGsx7wFAFPEfAUvY2HzhNeYhgsI5nw6gd0LeApAt7HFXoAb+ZrYvlHDM8AAAAASUVORK5CYII=" InformativeScreenshot="2fcb5f31cbfa543f3cc2b65cf7c8f0c7.png" ScopeSelectorArgument="&lt;wnd app='iexplore.exe' cls='#32770' title='Message from webpage' /&gt;" SearchSteps="Selector" />
                       </uix:NClick.Target>
                     </uix:NClick>
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="473,614" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;הופיעה הודעה שאינה מוכרת: &quot;+Environment.NewLine+str_MessageText+Environment.NewLine+Environment.NewLine+&quot;הרובוט ינסה ללחוץ CANCEL ויזרוק שגיאה&quot;]" />
-                    <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'Cancel'" sap:VirtualizedContainerService.HintSize="431,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Timeout="0" Version="V1">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable DesignTimeRectangle="328, 125, 75, 23" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;wnd title='Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancel' check:text='Cancel' /&gt;" Guid="1dfd93ac-2991-48aa-874a-d5b109be8f25" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVGhD7dThDYMgEIZhdmIblmEVFnAIRnEDN7h6FvWwgKnXmki+H2/SQtuEp3hmmiZC1wKeIuApyvCGYUAnSa8PvHEcUSXgKQKeIuApAp4i4Cm6Hy84MsZsWR/Ln/tpgZyx5GNp73r34i1wjkJp7689Hi+St7UD8F7pNqZD+/225jeV99P3XDhZezJe9GStp1jay+KDrrczQawIh5sbnATa11zg1/LP6h0vm4W1Q8v3JZCELXpDPh2vdQCG22BbQK292lprXdeNeCNFbwUSF+Z5Ns8wxssezRqQfP+ek/kMLK1xHeBxC+D2WB1mG+ecOGgL7/i9hM/jYV3Lfr8DvJ4CniLgKQKeIuApOsVD7aRXhoe+C3iKgHe5iV7YXHOCCKrA6wAAAABJRU5ErkJggg==" InformativeScreenshot="410af39137746f2e91f4dc80060ab809.png" ScopeSelectorArgument="&lt;wnd app='iexplore.exe' cls='#32770' title='Message from webpage' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                      </uix:NClick.Target>
-                    </uix:NClick>
-                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
-                      <ui:MultipleAssign.AssignOperations>
-                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_35">
-                            <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
-                            </ui:AssignOperation.To>
-                            <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="s:Exception">[new system.Exception("כשל בהפקת דוח ניתוח רפואי")]</InArgument>
-                            </ui:AssignOperation.Value>
-                          </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_36">
-                            <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[SystemException.Data("Details")]</OutArgument>
-                            </ui:AssignOperation.To>
-                            <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="x:Object">[str_MessageText]</InArgument>
-                            </ui:AssignOperation.Value>
-                          </ui:AssignOperation>
-                        </scg:List>
-                      </ui:MultipleAssign.AssignOperations>
-                    </ui:MultipleAssign>
-                    <Throw Exception="[SystemException]" sap:VirtualizedContainerService.HintSize="431,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
-                  </Sequence>
+                  <If Condition="[str_MessageText.Contains(&quot;רכיבי חובה ריקים&quot;)]" sap:VirtualizedContainerService.HintSize="991,966" sap2010:WorkflowViewState.IdRef="If_10">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="473,450" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="431,156" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="244, 125, 75, 23" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='unchecked' /&gt;" Guid="cc4687a3-6bac-4883-8d73-e15aad088664" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVGhD7dbBDcIwDIXh7JRtMgm3rJJVMgXnbpANTK3QNK5SQbEIRnqHX2Dq06dAcKUUQp8FPEXAUyTw3O2OXiS8xDBYRjLhJYbnwrIs6BDwFAFPEfAUAU+RbbwUyDnX8jF3zxMF5ynmOqew7oTUPf9+ZvFy9CtYoNQ+yxR9D9ThMfJkOM4oHkPtp6qVI/kGuuHxa488L5t4Aqmvnr6Q+H3F8yPkSf0h3obFeKPfwnnZxDtcBq3Tr+1vTp9RvPMLYz9lHRpfGD5SbrtzMovHVcALf1UmA5rGsx7wFAFPEfAUvY2HzhNeYhgsI5nw6gd0LeApAt7HFXoAb+ZrYvlHDM8AAAAASUVORK5CYII=" InformativeScreenshot="2fcb5f31cbfa543f3cc2b65cf7c8f0c7.png" ScopeSelectorArgument="&lt;wnd app='iexplore.exe' cls='#32770' title='Message from webpage' /&gt;" SearchSteps="Selector" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_15">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_56">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="ui:BusinessRuleException">[new BusinessRuleException("לא ניתן להפיק דוח עקב רכיבי חובה חסרים")]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                        <Throw Exception="[BusinessException]" sap:VirtualizedContainerService.HintSize="431,22" sap2010:WorkflowViewState.IdRef="Throw_8" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="473,808" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[&quot;הופיעה הודעה שאינה מוכרת: &quot;+Environment.NewLine+str_MessageText+Environment.NewLine+Environment.NewLine+&quot;הרובוט ינסה ללחוץ CANCEL ויזרוק שגיאה&quot;]" />
+                        <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'Cancel'" sap:VirtualizedContainerService.HintSize="431,156" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Timeout="0" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="328, 125, 75, 23" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;wnd title='Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancel' check:text='Cancel' /&gt;" Guid="1dfd93ac-2991-48aa-874a-d5b109be8f25" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVGhD7dThDYMgEIZhdmIblmEVFnAIRnEDN7h6FvWwgKnXmki+H2/SQtuEp3hmmiZC1wKeIuApyvCGYUAnSa8PvHEcUSXgKQKeIuApAp4i4Cm6Hy84MsZsWR/Ln/tpgZyx5GNp73r34i1wjkJp7689Hi+St7UD8F7pNqZD+/225jeV99P3XDhZezJe9GStp1jay+KDrrczQawIh5sbnATa11zg1/LP6h0vm4W1Q8v3JZCELXpDPh2vdQCG22BbQK292lprXdeNeCNFbwUSF+Z5Ns8wxssezRqQfP+ek/kMLK1xHeBxC+D2WB1mG+ecOGgL7/i9hM/jYV3Lfr8DvJ4CniLgKQKeIuApOsVD7aRXhoe+C3iKgHe5iV7YXHOCCKrA6wAAAABJRU5ErkJggg==" InformativeScreenshot="410af39137746f2e91f4dc80060ab809.png" ScopeSelectorArgument="&lt;wnd app='iexplore.exe' cls='#32770' title='Message from webpage' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="431,156" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="def84d5e-50b7-40d7-8977-59d4efb2351d" Timeout="0" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="244, 125, 75, 23" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='unchecked' /&gt;" Guid="cc4687a3-6bac-4883-8d73-e15aad088664" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVGhD7dbBDcIwDIXh7JRtMgm3rJJVMgXnbpANTK3QNK5SQbEIRnqHX2Dq06dAcKUUQp8FPEXAUyTw3O2OXiS8xDBYRjLhJYbnwrIs6BDwFAFPEfAUAU+RbbwUyDnX8jF3zxMF5ynmOqew7oTUPf9+ZvFy9CtYoNQ+yxR9D9ThMfJkOM4oHkPtp6qVI/kGuuHxa488L5t4Aqmvnr6Q+H3F8yPkSf0h3obFeKPfwnnZxDtcBq3Tr+1vTp9RvPMLYz9lHRpfGD5SbrtzMovHVcALf1UmA5rGsx7wFAFPEfAUvY2HzhNeYhgsI5nw6gd0LeApAt7HFXoAb+ZrYvlHDM8AAAAASUVORK5CYII=" InformativeScreenshot="2fcb5f31cbfa543f3cc2b65cf7c8f0c7.png" ScopeSelectorArgument="&lt;wnd app='iexplore.exe' cls='#32770' title='Message from webpage' /&gt;" SearchSteps="Selector" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_14">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_54">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="s:Exception">[new system.Exception("כשל בהפקת דוח ניתוח רפואי")]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_55">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[SystemException.Data("Details")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">[str_MessageText]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                        <Throw Exception="[SystemException]" sap:VirtualizedContainerService.HintSize="431,22" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                      </Sequence>
+                    </If.Else>
+                  </If>
                 </If.Else>
               </If>
             </Sequence>
@@ -498,7 +536,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">800,1055.5 800,1245.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="434,699" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>

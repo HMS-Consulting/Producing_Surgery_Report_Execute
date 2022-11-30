@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Type 'hm:ProcessSetup' ('clr-namespace:HMS.Modeling;assembly=Modeling') could not be resolved and was automatically replaced with 'UnknownType'" Name="io_ProcessSetup" Type="InOutArgument(hm:ProcessSetup)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1125,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1125,571</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -89,7 +89,6 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Seq_Init" sap:VirtualizedContainerService.HintSize="284,462" sap2010:WorkflowViewState.IdRef="Sequence_13">
@@ -146,7 +145,7 @@
                       <av:Size x:Key="ShapeSize">200,66</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Seq_actions that validate system is active" sap:VirtualizedContainerService.HintSize="476,626" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <Sequence DisplayName="Seq_actions that validate system is active" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,7 +208,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">130,432.04 130,528.6 230,528.6</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Seq_Kill process and launch business app" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <Sequence DisplayName="Seq_Kill process and launch business app" sap:VirtualizedContainerService.HintSize="376,286" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -222,7 +221,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:KillProcess>
-                        <h:Login sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Login_1" in_dbl_timeoutInSec="3" in_secure_password="[CType(io_ProcessSetup.Job.CustomData(&quot;ChameleonPassword&quot;),SecureString)]" in_str_chameleon_url="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonURL&quot;).ToString]" in_str_field="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonField&quot;).ToString]" in_str_username="[io_ProcessSetup.Job.CustomData(&quot;ChameleonUsername&quot;).ToString]">
+                        <h:Login sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Login_1" in_dbl_timeoutInSec="10" in_secure_password="[CType(io_ProcessSetup.Job.CustomData(&quot;ChameleonPassword&quot;),SecureString)]" in_str_chameleon_url="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonURL&quot;).ToString]" in_str_field="[io_ProcessSetup.Environment.GeneralAssets.Custom(&quot;ChameleonField&quot;).ToString]" in_str_username="[io_ProcessSetup.Job.CustomData(&quot;ChameleonUsername&quot;).ToString]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
