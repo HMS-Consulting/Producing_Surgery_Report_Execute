@@ -9,7 +9,7 @@
     <x:Property sap2010:Annotation.AnnotationText="Raise that falg in case you postponed the transaction" Name="io_boo_TransactionPostponed" Type="InOutArgument(x:Boolean)" />
     <x:Property sap2010:Annotation.AnnotationText="Type 'hm:ProcessSetup' ('clr-namespace:HMS.Modeling;assembly=Modeling') could not be resolved and was automatically replaced with 'UnknownType'" Name="io_ProcessSetup" Type="InOutArgument(hm:ProcessSetup)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1125,1872</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1121,1872</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="58">
@@ -128,7 +128,6 @@
       <AssemblyReference>HmsTeam.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Flowchart_Execute (&quot;Green Path&quot;)" sap:VirtualizedContainerService.HintSize="1131,1807" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -146,7 +145,7 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">1096.8</x:Double>
         <x:Double x:Key="Height">1770.8400000000002</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">60,39.9 90,39.9 90,11 110,11</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">60,39.9 90,39.9 90,76.5 110,76.5</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -157,7 +156,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">700,727.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">900,738.5 930,738.5 930,218.12 770,218.12</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">800,778.5 800,798.12 1020.895,798.12 1020.895,288.12 670,288.12 670,258.12</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="הודעה קופצת לאחר ניסיון הפקת דוח" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="def84d5e-50b7-40d7-8977-59d4efb2351d" Timeout="5" Version="V1">
@@ -312,7 +311,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">570,207.12</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">670,229.12 670,259.12 641.283333333333,259.12 641.283333333333,326.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">570,232.62 541.283333333333,232.62 541.283333333333,296.5 601.283333333333,296.5 601.283333333333,326.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
@@ -391,7 +390,7 @@
                   <av:Point x:Key="ShapeLocation">561.283333333333,326.5</av:Point>
                   <av:Size x:Key="ShapeSize">160,87</av:Size>
                   <av:PointCollection x:Key="TrueConnector">561.283333333333,370 390,370 390,404.5</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">721.283333333333,370 828.895,370 828.895,450</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">721.283333333333,370 751.283333333333,370 751.283333333333,420 698.895,420 698.895,480 728.895,480</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
@@ -400,7 +399,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">290,404.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">390,426.5 390,456.5 530,456.5 530,516.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">490,430 490,516.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
@@ -540,7 +539,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">728.895,450</av:Point>
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">828.895,472 828.895,502 800,502 800,554.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">859.895,510 859.895,540 800,540 800,554.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
@@ -562,7 +561,7 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">700,554.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">800,576.5 800,625.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">800,605.5 800,625.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
@@ -618,7 +617,7 @@
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">700,625.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">800,647.5 800,727.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">800,676.5 800,727.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NApplicationCard AttachMode="ByInstance" DisplayName="חלון שיבוץ רכיבים להדפסה" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="c3a1ac95-2304-4fd8-a02f-03fe4803f931" Version="V1">
@@ -683,7 +682,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,694.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,716.5 300,769</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,745.5 300,769</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
@@ -789,7 +788,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">110,0</av:Point>
           <av:Size x:Key="ShapeSize">200,153</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">310,11 340,11 340,76.5 350,76.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">310,76.5 350,76.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence sap2010:Annotation.AnnotationText="if you want to run this file only without main, please fill the values in beginning actions arguments and in the transaction specific content" DisplayName="transaction manually creation" sap:VirtualizedContainerService.HintSize="200,153" sap2010:WorkflowViewState.IdRef="Sequence_25">
@@ -1061,7 +1060,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">350,137.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">550,148.5 670,148.5 670,207.12</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">550,163 670,163 670,207.12</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <uix:NApplicationCard AttachMode="ByInstance" DisplayName="כניסה לרשומה הרלוונטית" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="94ec9eb1-dac9-480a-b395-a216103c78e7" Timeout="10" Version="V2">
