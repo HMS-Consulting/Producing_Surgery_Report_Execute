@@ -3,9 +3,9 @@
   "description": "Producing_Surgery_Report_Execute2",
   "main": "Main.xaml",
   "dependencies": {
-    "HmsTeam.Chameleon.Activities": "[1.0.13]",
+    "HmsTeam.Chameleon.Activities": "[1.0.15]",
     "HmsTeam.Framework.Activities": "2022.5.20",
-    "HmsTeam.OrchestratorAPI.Activities": "[2022.7.8]",
+    "HmsTeam.OrchestratorAPI.Activities": "[2022.7.9]",
     "HmsTeam.Shared": "2022.3.7",
     "UiPath.System.Activities": "22.10.3",
     "UiPath.UIAutomation.Activities": "22.10.3"
