@@ -7,7 +7,7 @@
     <x:Property Name="in_dic_AllTransactionData" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Type 'hm:ProcessSetup' ('clr-namespace:HMS.Modeling;assembly=Modeling') could not be resolved and was automatically replaced with 'UnknownType'" Name="io_ProcessSetup" Type="InOutArgument(hm:ProcessSetup)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>741,1215</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>741,611</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="84">
@@ -96,7 +96,7 @@
       <AssemblyReference>HmsTeam.Framework.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="After Set Transaction Status" sap:VirtualizedContainerService.HintSize="604,1150" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="After Set Transaction Status" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JArray" Name="jarray_QueueItems" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_QueueItems" />
@@ -106,10 +106,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_list_transactionBusinessExceptions.Count&gt;0 OrElse in_list_transactionSystemExceptions.Count&gt;0]" DisplayName="If Transaction failed" sap:VirtualizedContainerService.HintSize="562,1058" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[in_list_transactionBusinessExceptions.Count&gt;0 OrElse in_list_transactionSystemExceptions.Count&gt;0]" DisplayName="If Transaction failed" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
