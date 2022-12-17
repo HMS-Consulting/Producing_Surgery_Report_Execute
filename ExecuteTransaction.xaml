@@ -9,7 +9,7 @@
     <x:Property sap2010:Annotation.AnnotationText="Raise that falg in case you postponed the transaction" Name="io_boo_TransactionPostponed" Type="InOutArgument(x:Boolean)" />
     <x:Property sap2010:Annotation.AnnotationText="Type 'hm:ProcessSetup' ('clr-namespace:HMS.Modeling;assembly=Modeling') could not be resolved and was automatically replaced with 'UnknownType'" Name="io_ProcessSetup" Type="InOutArgument(hm:ProcessSetup)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1121,1872</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,1872</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -131,7 +131,6 @@
       <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>HmsTeam.Chameleon.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Flowchart_Execute (&quot;Green Path&quot;)" sap:VirtualizedContainerService.HintSize="1131,1807" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -452,10 +451,10 @@
                   <av:PointCollection x:Key="ConnectorLocation">570,444 570,474 500,474 500,574</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:RetryScope DisplayName="חלון שיבוץ רכיבים להדפסה" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="2" RetryInterval="00:00:00">
+              <ui:RetryScope DisplayName="חלון שיבוץ רכיבים להדפסה" sap:VirtualizedContainerService.HintSize="568,1619" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="2" RetryInterval="00:00:00">
                 <ui:RetryScope.ActivityBody>
                   <ActivityAction>
-                    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="526,1485" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="526,1445" sap2010:WorkflowViewState.IdRef="Sequence_66">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -575,7 +574,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="חלון שיבוץ רכיבים להדפסה" sap:VirtualizedContainerService.HintSize="484,833" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="c3a1ac95-2304-4fd8-a02f-03fe4803f931" Version="V1">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="חלון שיבוץ רכיבים להדפסה" sap:VirtualizedContainerService.HintSize="484,793" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="c3a1ac95-2304-4fd8-a02f-03fe4803f931" Timeout="20" Version="V1">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
@@ -660,7 +659,7 @@
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Parallel DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="1340,1473" sap2010:WorkflowViewState.IdRef="Parallel_2">
+                      <Parallel DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Parallel_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
