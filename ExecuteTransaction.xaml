@@ -451,7 +451,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">570,444 570,474 500,474 500,574</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:RetryScope DisplayName="חלון שיבוץ רכיבים להדפסה" sap:VirtualizedContainerService.HintSize="568,1619" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="2" RetryInterval="00:00:00">
+              <ui:RetryScope DisplayName="חלון שיבוץ רכיבים להדפסה" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="2" RetryInterval="00:00:00">
                 <ui:RetryScope.ActivityBody>
                   <ActivityAction>
                     <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="526,1445" sap2010:WorkflowViewState.IdRef="Sequence_66">
@@ -659,13 +659,25 @@
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Parallel DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Parallel_2">
+                      <Parallel DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="1160,445" sap2010:WorkflowViewState.IdRef="Parallel_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[boo_Continue]" DisplayName="While" sap:VirtualizedContainerService.HintSize="334,1427" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[boo_Continue]" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,399" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_6">
+                          <ui:InterruptibleWhile.Body>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:CloseWindow UseWindow="{x:Null}" ContinueOnError="True" DisplayName="Close Window 'iexplore.exe ריכוז'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_6" InformativeScreenshot="e266fbe32dffc7e94e89026dbeba11bc" Selector="&lt;wnd app='iexplore.exe' cls='Internet Explorer_TridentDlgFrame' title='ריכוז הודעות -- Webpage Dialog' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+                            </Sequence>
+                          </ui:InterruptibleWhile.Body>
+                        </ui:InterruptibleWhile>
+                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[boo_Continue]" DisplayName="While" sap:VirtualizedContainerService.HintSize="334,399" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
                           <ui:InterruptibleWhile.Body>
                             <Sequence DisplayName="ERROR MESSAGE" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_65">
                               <sap:WorkflowViewStateService.ViewState>
@@ -719,7 +731,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:WindowScope>
-                              <If Condition="[boo_ErrorMessage]" DisplayName="If ERROR SHOWED UP" sap:VirtualizedContainerService.HintSize="1594,1353" sap2010:WorkflowViewState.IdRef="If_14">
+                              <If Condition="[boo_ErrorMessage]" DisplayName="If ERROR SHOWED UP" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_14">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -985,7 +997,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:InterruptibleWhile>
-                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="832,1427" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="200,399" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
                           <uix:NApplicationCard.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -1397,7 +1409,7 @@
                           </uix:NApplicationCard.TargetApp>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -1710,10 +1722,10 @@
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch DisplayName="כניסה לתיק המטופל" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <TryCatch.Try>
-              <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1226,3351" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:00">
+              <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1226,3311" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:00">
                 <ui:RetryScope.ActivityBody>
                   <ActivityAction>
-                    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1184,3177" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1184,3137" sap2010:WorkflowViewState.IdRef="Sequence_37">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1821,8 +1833,8 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NApplicationCard>
-                      <Parallel sap:VirtualizedContainerService.HintSize="1142,1425" sap2010:WorkflowViewState.IdRef="Parallel_1">
-                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[boo_Continue]" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,1379" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                      <Parallel sap:VirtualizedContainerService.HintSize="1142,1385" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[boo_Continue]" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,1339" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                           <ui:InterruptibleWhile.Body>
                             <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_51">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1834,13 +1846,13 @@
                             </Sequence>
                           </ui:InterruptibleWhile.Body>
                         </ui:InterruptibleWhile>
-                        <Sequence DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="556,1379" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                        <Sequence DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="556,1339" sap2010:WorkflowViewState.IdRef="Sequence_52">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="514,1187" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="תיק המטופל" sap:VirtualizedContainerService.HintSize="514,1147" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e44197a3-846f-4307-a57f-8df68fb2124a" Version="V1">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
