@@ -3,7 +3,7 @@
   "description": "Producing_Surgery_Report_Execute2",
   "main": "Main.xaml",
   "dependencies": {
-    "HmsTeam.Chameleon.Activities": "[1.0.16]",
+    "HmsTeam.Chameleon.Activities": "[1.0.17]",
     "HmsTeam.Framework.Activities": "2022.5.20",
     "HmsTeam.OrchestratorAPI.Activities": "[2022.7.9]",
     "HmsTeam.Shared": "2022.3.7",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.4.6.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.4",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
